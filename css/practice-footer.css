@@ -38,6 +38,7 @@ body{
 .section1{
     top:20px;
     padding:30px;
+    margin:.5em 0;
 }
 .icon{
     color:#F2ACBF;
@@ -126,4 +127,8 @@ input:focus{
     justify-content:center;
     color:#594246;
     margin:0 auto;
+}
+
+.phone{
+    margin-bottom: .5em;
 }
