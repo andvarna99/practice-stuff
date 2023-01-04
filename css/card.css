@@ -1,0 +1,47 @@
+body{
+    width: 100%;
+    background: rgb(0, 65, 0);
+    margin: 0 auto;
+    display:flex;
+}
+main{
+    position:relative;
+    background: #78af69;
+    width:90%;
+    margin:0 auto;
+    border: 3px solid black;
+}
+h1,h3{
+    align-self: center;
+}
+h1{
+    font-size: x-large;
+    font-weight: bold;
+    color: white;
+    text-shadow: green;
+}
+h3{
+    font-size: medium;
+    color: white;
+    text-shadow: #004100;
+}
+.wreath{
+    position: relative;
+    align-self: center;
+    flex-wrap: wrap;
+}
+.candy-cane{
+    position: relative;
+    width:5px;
+    height: 5px;
+}
+.mistletoe{
+    /*position: relative;*/
+    width:5px;
+    height: 5px;
+}
+.stock{
+    /*position: relative;*/
+    width:5px;
+    height: 5px;
+}
