@@ -16,13 +16,22 @@
   <style>
       main{
         background-color:#EDEAE0;
+        padding-top:5px;
+      }
+      h1{
+        color: #4f353c;
       }
       h3,i{
         color:#583C43;
       }
-      h6, ul, p{
+      h6, h5, ul, p{
         color:#696969;
       }
+      #heading, #experience, #projects, #contact{
+        background-color:white;
+        border: 2px solid grey;
+      }
+      hr.new1{}
 
   </style>
 </head>
@@ -30,80 +39,100 @@
   <main>
     <!--contact info-->
     <div class="container text-center">
-      <h1 class="pt-5 fs-1 ">ANDREA VARNADO</h1>
-      <h3 class="pt-4">Software Developer</h3>
-      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam consectetur debitis, deserunt dolore exercitationem, harum inventore natus numquam obcaecati quae qui rerum veniam. Consequuntur nisi quidem repellendus sint sit? At, culpa, nihil. Cupiditate, dolor, eius.</p>
-      <div class="row d-flex justify-content-between pt-4">
-        <div class="col-12 col-md-3">
-          <i class="fa-solid fa-phone" ></i>
-          <a class="text-dark link-secondary text-decoration-none">210-834-2913</a>
+      <div id="heading" class="container mt-3 pt-2">
+        <h1 class="fs-1 ">ANDREA VARNADO</h1>
+        <h3 class="pt-4">Software Developer</h3>
+        <p class="">Software developer with exceptional communication skills, a strong attention to detail, and high concern for data accuracy. Leveraging full-stack skills merged with a passion for programming to build innovative, creative, and much needed solutions that contribute to the growth of fashion tech and other software applications.</p>
+      </div>
+        <div id="contact" class="row d-flex justify-content-between mt-4">
+          <div class="col-12 col-md-3">
+            <i class="fa-solid fa-phone" ></i>
+            <a class="text-dark link-secondary text-decoration-none">210-834-2913</a>
+          </div>
+          <div class="col-12 col-md-3">
+            <i class="fa-solid fa-envelope"></i>
+            <a class="text-dark link-secondary w-25 text-decoration-none">@gmail.com</a>
+          </div>
+          <div class="col-12 col-md-3">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <a class="text-dark link-secondary  text-decoration-none" href="https://linkedin.com/in/andrea-varnado">@andrea-varnado</a>
+          </div>
+          <div class="col-12 col-md-3">
+            <i class="fa-brands fa-github"></i>
+            <a class="text-dark link-secondary text-decoration-none" href="https://github.com/andvarna99">@andvarna99</a>
+          </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!--skills, abilities, academic, and experience-->
+    <div class="text-start mb-2">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div id="experience" class="container">
+            <div>
+              <h3 class="">SKILLS AND ABILITIES</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>Bootstrap</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="">ACADEMIC</h3>
+              <h5>CODEUP</h5>
+              <h6>Certification of Completion</h6>
+              <h6>Nov 2022 - May 2023</h6>
+              <p>A fully-immersive, project-based, and intensive 20-week Full-Stack Java Career Accelerator that provides students with 670 hours of expert instruction in software development</p>
+              <h5>UNIVERSITY OF NORTH TEXAS</h5>
+              <p>Aug 2017 - Dec 2019 </p>
+              <p>Completed two and a half years of undergraduate with a focus in classical vocal performance</p>
+            </div>
+            <div>
+              <h3 class="">PROFESSIONAL EXPERIENCE</h3>
+              <h5>STITCH FIX</h5>
+              <h6>Senior Stylist | Dec 2020 - Aug 2022</h6>
+              <ul>
+                <li>Reviewed client profiles and preferences to provide customized and fashionable recommendations</li>
+                <li>Developed and applied basic knowledge and procedures to complete assigned projects and tasks daily while leading with client obsession</li>
+                <li>Followed established procedures to complete assignments while developing skills in identifying and implementing resources to increase efficiency and ensure the highest quality work</li>
+              </ul>
+              <h5>ROSELLA COFFEE</h5>
+              <h6>Barista/Server | Dec 2019 - Mar 2020</h6>
+              <ul>
+                <li>Maintained a calm demeanor during periods of high volume or unusual events to keep the store operating to standard and to set a positive example for the shift team</li>
+                <li>Performed related administrative and clerical tasks as assigned</li>
+                <li>Presented personalized food and beverage recommendations guests would enjoy</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-3">
-          <i class="fa-solid fa-envelope"></i>
-          <a class="text-dark link-secondary w-25 text-decoration-none">@gmail.com</a>
-        </div>
-        <div class="col-12 col-md-3">
-          <i class="fa-brands fa-linkedin-in"></i>
-          <a class="text-dark link-secondary  text-decoration-none" href="https://linkedin.com/in/andrea-varnado">@andrea-varnado</a>
-        </div>
-        <div class="col-12 col-md-3">
-          <i class="fa-brands fa-github"></i>
-          <a class="text-dark link-secondary text-decoration-none" href="https://github.com/andvarna99">@andvarna99</a>
+      <!--development and awards-->
+        <div class="col-md-6">
+          <div id="projects" class="container">
+            <div>
+              <h3 class="">DEVELOPMENT PROJECTS</h3>
+              <h6>PROJECT 1</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis magni nihil quis quisquam repellendus soluta!</p>
+              <h6>PROJECT 2</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi corporis nostrum quisquam soluta, tempora.</p>
+              <h6>PROJECT 3</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloremque enim quaerat reprehenderit sed, sunt.</p>
+            </div>
+            <div>
+              <h3 class="">AWARDS AND INVOLVEMENT</h3>
+              <h6>AWARD 1</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dolorum ex labore unde vel?</p>
+              <h6>INVOLVEMENT 1</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim fugiat impedit, odio placeat voluptates?</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <br>
-    <hr class="line m-3">
-    <!--skills, abilities, academic, and experience-->
-    <div class="container-fluid text-start ">
-      <div class="row">
-      <div class=" column-one col-md-6">
-        <div>
-          <div>
-            <h3 class="">SKILLS AND ABILITIES</h3>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Javascript</li>
-              <li>Bootstrap</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="">ACADEMIC</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum dolore ducimus eaque, explicabo iure nulla quibusdam reiciendis sunt vitae.</p>
-          </div>
-          <div>
-            <h3 class="">PROFESSIONAL EXPERIENCE</h3>
-            <h6>STITCH FIX</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa labore laborum, numquam quis soluta vero!</p>
-            <h6>ROSELLA COFFEE</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque inventore ipsum nihil nulla, porro qui!</p>
-          </div>
-        </div>
-      </div>
-      <!--development and awards-->
-      <div class="col-md-6 column-two">
-        <div>
-          <div>
-            <h3 class="">DEVELOPMENT PROJECTS</h3>
-            <h6>PROJECT 1</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis magni nihil quis quisquam repellendus soluta!</p>
-            <h6>PROJECT 2</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda commodi corporis nostrum quisquam soluta, tempora.</p>
-            <h6>PROJECT 3</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos doloremque enim quaerat reprehenderit sed, sunt.</p>
-          </div>
-          <div>
-            <h3 class="">AWARDS AND INVOLVEMENT</h3>
-            <h6>AWARD 1</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet culpa dolorum ex labore unde vel?</p>
-            <h6>INVOLVEMENT 1</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim fugiat impedit, odio placeat voluptates?</p>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
 
   </main>
   <!--javascript bundle-->
