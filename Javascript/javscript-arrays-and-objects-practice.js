@@ -37,7 +37,6 @@ function getOlder(){
         }];
     let dogsAge = [];
     for (let i = 0; i < dogs.length; i++) {
-        // dogsAge.push(dogs.age([i]));
         console.log(dogsAge.push(dogs.age[i]));
     }
 }
