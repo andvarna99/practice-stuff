@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Demo</title>
+    <!-- Mapbox CSS -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet'/>
+    <!--custom css-->
+    <style>
+        #my-map {
+            /* the width and height may be set to any size */
+            width: 100%;
+            height: 700px;
+        }
+    </style>
+</head>
+<body>
+<h1>My First Mapbox Map</h1>
+<div id="my-map"></div>
+
+<!--jquery js-->
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+<!--api keys-->
+<script src="Javascript/keys.js"></script>
+<!-- Mapbox JS -->
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.12.0/mapbox-gl.js'></script>
+<!-- Mapbox Geocoder Util Methods -->
+<script src="Javascript/mapbox-geocoder-utils.js"></script>
+
+<script>
+"use strict";
+  $(document).ready(function(){
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    //setting the starting container to san antonio
+    const map = new mapboxgl.Map({
+      container: "my-map", //id of div containing map
+      style: "mapbox://styles/mapbox/streets-v9",
+      zoom: 8,
+      center: [-98.4946, 29.4252]
+    });
+
+    //could also create markers in array and push new ones into the array
+    //adding a marker for san antonio
+    let marker = new mapboxgl.Marker();
+    marker.setLngLat([-98.4946,29.4252]);
+    marker.addTo(map);
+
+    //find out where north star mall is and make a marker and popup for it with geocoding
+    // the  geocode method from mapbox-geocoder-utils.js
+    geocode("North Star Mall", MAPBOX_API_KEY).then(function(result) {
+        // console.log(result);
+        marker = new mapboxgl.Marker();
+        marker.setLngLat(result);
+        marker.addTo(map);
+        // map.setCenter(result);
+        // map.setZoom(20);
+    });
+
+    pinThatAddress("North Star Mall");
+    pinThatAddress("Rackspace");
+    function pinThatAddress(){
+        geocode("North Star Mall", MAPBOX_API_KEY).then(function(result) {
+            marker = new mapboxgl.Marker();
+            marker.setLngLat(result);
+            marker.addTo(map);
+        });
+    }
+    //reverse geocoding. not an array of long and lat, its an object
+    // reverse geocode method from mapbox-geocoder-utils.js
+      reverseGeocode({lng: -98.4861, lat: 29.4260}, accessToken).then(function(results) {
+          // logs the address for The Alamo
+          console.log(results);
+      });
+
+    //new marker for north star mall
+    marker = new mapboxgl.Marker();
+    marker.setLngLat([-98.4960,29.5185]);
+    marker.addTo(map);
+
+    //popup
+    const popup = new mapboxgl.Popup();
+    popup.setHTML(<h3>North Star Mall</h3>);
+    //connecting popup to marker
+    marker.setPopup(popup);
+
+
+  });
+
+</script>
+</body>
+</html>
